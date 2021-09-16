@@ -1,13 +1,27 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+    <h1>Order <%= @order.id %></h1>
+
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  </div>
+    <h3>Thank you for your order!</h4>
+    <h4> Your total is : <% humanized_money_with_symbol @order.total_cents / 100 %></h4>
+    <h4> Confirmation sent to <% @order.email %> </h3>
 
+  </div>
+  <div class="products-flex-container">
+
+    <% @line_items.each do |item| %>
+    
+      <h4><%= item.product.name %></h4>
+      <div>
+      <% image_tag item.product.image.url %>
+      <p><%= item.product.description %></p>
+      </div>  
+    <% end %>
+  </div
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
