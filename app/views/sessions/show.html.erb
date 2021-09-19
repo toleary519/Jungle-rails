@@ -1,0 +1,11 @@
+
+<h2>Welcome Back! Please enter your information to login.</h2>
+
+<%= form_tag '/login' do %>
+  
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+<% end %>  
+
+  
