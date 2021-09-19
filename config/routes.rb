@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
+  # get '/' => 'dashboard#show'
   get '/about' => 'about#show'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
