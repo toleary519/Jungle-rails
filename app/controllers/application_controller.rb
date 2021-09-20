@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  # destroy?
+
   def authorize
     redirect_to '/login' unless current_user
   end 
