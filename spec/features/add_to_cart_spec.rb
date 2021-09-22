@@ -25,6 +25,5 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     #verify
     expect(page).to have_content 'My Cart (1)'
 
-    
   end
 end
